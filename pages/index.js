@@ -1,9 +1,7 @@
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-import Link from 'next/link'
 import { fetchUserAction } from '../actions'
-import Examples from '../components/examples'
 
 
 const codeStyle = {

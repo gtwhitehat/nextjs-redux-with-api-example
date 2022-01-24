@@ -23,7 +23,7 @@ const Index = () => {
   return (
     <>
       <pre style={codeStyle}>
-        <code>{JSON.stringify(state, null, 4)}</code>
+        <code>{JSON.stringify(state.user, null, 4)}</code>
       </pre>
     </>
   )

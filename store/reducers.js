@@ -2,15 +2,18 @@ import { combineReducers } from 'redux'
 import * as types from './types'
 
 const init = {
-  userAll: {}
+  data: {},
+  pageNumber: 0
 }
 
 // USER REDUCER
 const userReducer = (state = init, { type, payload }) => {
   switch (type) {
     case types.FETCH_USER:
-      state.userAll = payload.data
-      return payload.data
+      const { data: { data = {}, page = 0 } = {} } = payload || {}
+      state.data = data
+      state.pageNumber = page
+      return state
     default:
       return state
   }

@@ -21,14 +21,9 @@ const Index = () => {
     dispatch(fetchUserAction())
   }, [dispatch, isFetch])
 
-  const fetchUser = () => {
-    setIsFetch(true)
-    dispatch(fetchUserAction())
-  }
-
   return (
     <>
-      <button onClick={fetchUser}>fetch user</button>
+      <button onClick={() => setIsFetch(true)}>fetch user</button>
       <pre style={codeStyle}>
         <code>{JSON.stringify(users, null, 4)}</code>
       </pre>

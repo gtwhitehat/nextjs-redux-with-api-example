@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { fetchUserAction } from '../store/actions'
@@ -13,17 +13,24 @@ const codeStyle = {
 }
 
 const Index = () => {
-  const state = useSelector((state) => state)
+  const [isFetch, setIsFetch] = useState(false)
+  const users = useSelector((state) => state.user)
 
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(fetchUserAction())
-  }, [dispatch])
+  }, [dispatch, isFetch])
+
+  const fetchUser = () => {
+    setIsFetch(true)
+    dispatch(fetchUserAction())
+  }
 
   return (
     <>
+      <button onClick={fetchUser}>fetch user</button>
       <pre style={codeStyle}>
-        <code>{JSON.stringify(state.user, null, 4)}</code>
+        <code>{JSON.stringify(users, null, 4)}</code>
       </pre>
     </>
   )

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { Button } from '@gtwhitehat/web-component-ib-v1'
 
 import { fetchUserAction } from '../store/actions'
 
@@ -17,13 +18,19 @@ const Index = () => {
   const users = useSelector((state) => state.user)
 
   const dispatch = useDispatch()
+
+  const fetchUser = async () => {
+    await dispatch(fetchUserAction())
+    setIsFetch(true)
+  }
+
   useEffect(() => {
-    dispatch(fetchUserAction())
-  }, [dispatch, isFetch])
+  }, [isFetch])
+
 
   return (
     <>
-      <button onClick={() => setIsFetch(true)}>fetch user</button>
+      <Button onClick={fetchUser}>Fetch</Button>
       <pre style={codeStyle}>
         <code>{JSON.stringify(users, null, 4)}</code>
       </pre>

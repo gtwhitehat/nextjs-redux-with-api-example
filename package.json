@@ -3,9 +3,12 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@gtwhitehat/web-component-ib-v1": "^0.0.2",
     "axios": "^0.25.0",
     "next": "latest",
     "react": "^17.0.2",
@@ -14,5 +17,16 @@
     "redux": "^4.0.4",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.12",
+    "@storybook/addon-actions": "^6.4.17",
+    "@storybook/addon-essentials": "^6.4.17",
+    "@storybook/addon-links": "^6.4.17",
+    "@storybook/builder-webpack5": "^6.4.17",
+    "@storybook/manager-webpack5": "^6.4.17",
+    "@storybook/react": "^6.4.17",
+    "babel-loader": "^8.2.3",
+    "typescript": "^4.5.5"
   }
 }

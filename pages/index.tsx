@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Button } from '@gtwhitehat/web-component-ib-v1'
+import '@gtwhitehat/web-component-ib-v1/dist/tailwind.css'
 
 import { fetchUserAction } from '../store/actions'
 

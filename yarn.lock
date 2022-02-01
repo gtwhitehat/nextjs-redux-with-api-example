@@ -1220,8 +1220,8 @@
 
 "@gtwhitehat/web-component-ib-v1@^0.0.2":
   version "0.0.2"
-  resolved "https://npm.pkg.github.com/download/@gtwhitehat/web-component-ib-v1/0.0.2/377c86f0e6251fd319eaf2c011d60c3d30f050c2dedb70c82e2814db476af145#38f360a167528721a0516b9c5958479255181c53"
-  integrity sha512-eu7VP0JPcf0koYCNtafX9MjlOLBOz+nTyqZDfyhpMODxL4kJM/tYi4hyDTrekjjPgFX4FfpzjeX0yN7vrI/D8w==
+  resolved "https://npm.pkg.github.com/download/@gtwhitehat/web-component-ib-v1/0.0.2/c8c32299bcbdb454fcd2752e90ddc6e7536db032e595272904f12145517664df#faba71adcdcbc1bde2a2c20dfbf61e8d805bd422"
+  integrity sha512-0ig8ty2meaWlYtag0D/5rFWMrRXSOCppw3f1pgC1VW7Lo1FdicopQ+LuHDr4jVQxbKzi/duyee6zzzbjsAuJAQ==
   dependencies:
     styled-components "^5.3.3"
 

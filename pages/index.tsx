@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Button } from '@gtwhitehat/web-component-ib-v1'
+import { Button, Card } from '@gtwhitehat/web-component-ib-v1'
 import '@gtwhitehat/web-component-ib-v1/dist/tailwind.css'
 
 import { fetchUserAction } from '../store/actions'
@@ -12,6 +12,10 @@ const codeStyle = {
   padding: 10,
   border: '1px solid grey',
   marginBottom: 10,
+}
+
+const wrapper = {
+  padding: '50px'
 }
 
 const Index = () => {
@@ -30,12 +34,13 @@ const Index = () => {
 
 
   return (
-    <>
+    <div style={wrapper}>
+      <Card title="Test" />
       <Button onClick={fetchUser}>Fetch</Button>
       <pre style={codeStyle}>
         <code>{JSON.stringify(users, null, 4)}</code>
       </pre>
-    </>
+    </div>
   )
 }
 
